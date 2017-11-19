@@ -101,7 +101,7 @@ router.post('/edit/:id', function(req, res) {
 	});
 });
 
-router.get('/details/:id', function( req, res) {
+router.get('/details/:id', ensureAuthenticated, function( req, res) {
 	Property.getPropertyById(req.params.id, function(err,propertydetails) {
 		console.log(propertydetails);
 		res.render('properties/property-details', propertydetails);
