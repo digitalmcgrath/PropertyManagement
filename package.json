@@ -1,0 +1,31 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "Simple authentication System",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris McGrath",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "config": "^1.28.1",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "handlebars": "^4.0.11",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemailer": "^4.3.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

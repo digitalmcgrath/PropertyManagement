@@ -1,0 +1,36 @@
+<div class="auth">
+	<div class="auth-container">
+    	<div class="card">
+        	<header class="auth-header">
+            	<h1 class="auth-title">Property Management</h1>
+            </header>
+            {{#if success_msg}}
+	                  <div class="alert alert-success">{{ success_msg }}</div>
+	                {{/if}}
+	                {{#if error_msg}}
+	                  <div class="alert alert-danger">{{ error_msg }}</div>
+	                {{/if}}
+	                {{#if error}}
+	                  <div class="alert alert-danger">{{ error }}</div>
+	                {{/if}}
+            <div class="auth-content">
+            	<p class="text-center">PASSWORD RECOVER</p>
+                <p class="text-muted text-center">
+                	<small>Enter your email address to recover your password.</small>
+                </p>
+                <form id="reset-form" action="/users/forgot" method="POST" novalidate="">
+                	<div class="form-group">
+                    	<label for="email1">Email</label>
+                        <input type="email" class="form-control underlined" name="email" id="email" placeholder="Your email address" required> </div>
+                    <div class="form-group">
+                    	<button type="submit" class="btn btn-block btn-primary">Reset</button>
+                    </div>
+                    <div class="form-group clearfix">
+                    	<a class="pull-left" href="/users/login">return to Login</a>
+                        <a class="pull-right" href="/users/register">Sign Up!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

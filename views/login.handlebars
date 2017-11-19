@@ -1,0 +1,53 @@
+<div class="auth">
+            <div class="auth-container">
+                <div class="card">
+
+                    <header class="auth-header">
+                        <h1 class="auth-title">Property Management</h1>
+                    </header>
+                    {{#if success_msg}}
+	                  <div class="alert alert-success">{{ success_msg }}</div>
+	                {{/if}}
+	                {{#if error_msg}}
+	                  <div class="alert alert-danger">{{ error_msg }}</div>
+	                {{/if}}
+	                {{#if error}}
+	                  <div class="alert alert-danger">{{ error }}</div>
+	                {{/if}}
+                    <div class="auth-content">
+                        <p class="text-center">LOGIN TO CONTINUE</p>
+                        <form action="/users/login" method="POST">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control underlined" name="username" id="username" placeholder="Your user name"> </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control underlined" name="password" id="password" placeholder="Your password"> </div>
+                            <div class="form-group">
+                                <label for="remember">
+                                    <input class="checkbox" id="remember" type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="/users/forgot" class="forgot-btn pull-right">Forgot password?</a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-primary">Login</button>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-muted text-center">Do not have an account?
+                                    <a href="signup.html">Sign Up!</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reference block for JS -->
+        <div class="ref" id="ref">
+            <div class="color-primary"></div>
+            <div class="chart">
+                <div class="color-primary"></div>
+                <div class="color-secondary"></div>
+            </div>
+        </div>

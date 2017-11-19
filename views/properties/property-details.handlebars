@@ -1,0 +1,41 @@
+<article class="content item-editor-page">
+    <div class="title-block">
+        <h3 class="title"> {{propertyname}} Details <a href="/properties/edit/{{id}}"><i class="fa fa-pencil fa-lg"></i></a>
+            <span class="sparkline bar" data-type="bar"></span>
+        </h3>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td>Address:</td>
+                <td></td>
+                <td>Details:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>{{address}}<br/>{{city}}<br/>{{state}}, {{zipcode}}</td>
+                <td></td>
+                <td>Rented: {{propertyRented}}<br/>Rental Amount: ${{rentalAmount}}<br/>Property Type: {{propertytype}}<br/>Relationship: {{propertyRelationship}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="6">Property Notes:</td>
+            </tr>
+            <tr>
+                <td colspan="6">{{propertynotes}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="title-block">
+        <h3 class="title"> Work Orders
+            <span class="sparkline bar" data-type="bar"></span>
+        </h3>
+    </div>
+
+
+</article>

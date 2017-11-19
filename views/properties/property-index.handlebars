@@ -1,0 +1,58 @@
+
+<article class="content cards-page">
+	<div class="title-block">
+    	<h3 class="title"> Your Properties </h3>
+        <p class="title-description"> Below are your current properties. Property names wrapped in green signify a rented property. </p>
+    </div>
+    {{#if success_msg}}
+                      <div class="alert alert-success">{{ success_msg }}</div>
+                    {{/if}}
+                    {{#if error_msg}}
+                      <div class="alert alert-danger">{{ error_msg }}</div>
+                    {{/if}}
+                    {{#if error}}
+                      <div class="alert alert-danger">{{ error }}</div>
+                    {{/if}}
+    <section class="section">
+    	<div class="row">
+        	{{# each properties}}
+            <div class="col-xl-4">
+            	<div class="card {{#ifCond propertyRented 'Yes'}}card-primary{{else}}card-default{{/ifCond}}">
+                	<div class="card-header">
+                    	<div class="header-block">
+                        	<p class="title"> {{propertyname}} </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <p>{{address}}<br/>{{city}}<br/>{{state}}, {{zipcode}}</p>
+                        <a class="remove" href="/properties/delete/{{_id}}" data-toggle="modal" data-target="#confirm-modal"><i class="fa fa-trash-o fa-lg"></i></a>
+                        &nbsp;<a class="edit" href="/properties/edit/{{_id}}"><i class="fa fa-pencil fa-lg"></i></a>&nbsp;<a class="detail" href="/properties/details/{{_id}}"><i class="fa fa-eye fa-lg"></i></a>
+                    </div>
+                    <div class="card-footer">Open Work Orders: 0 </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</article>
+
+
+<div class="modal fade" id="confirm-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><i class="fa fa-warning"></i> Alert</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to do this?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
